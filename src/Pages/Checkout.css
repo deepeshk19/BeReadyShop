@@ -1,0 +1,321 @@
+.checkout-container {
+    background-color: #eee2ed;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Checkout Item */
+.checkout-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+}
+
+/* Checkout Image */
+.checkout-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Checkout Details */
+.checkout-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+
+.checkout-details h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 5px 0;
+    color: #333;
+}
+
+.checkout-details p {
+    font-size: 14px;
+    color: #666;
+    margin: 3px 0;
+}
+
+/* Checkout Total */
+.checkout-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Confirm Purchase Button */
+.confirm-button {
+    background: #ff4081;
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+.confirm-button:hover {
+    background: #e6006d;
+}
+
+
+/* Delivery Form */
+.delivery-form {
+    max-width: 500px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(14px);
+    border-radius: 15px;
+    padding: 35px;
+    text-align: left;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Floating Neon Border - Fix Applied */
+.delivery-form::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    padding: 3px;
+    background: linear-gradient(135deg, #f0d2e1, #eed7dd, #e4bdd0);
+    
+    /* Fix: Prevent interference with inputs */
+    z-index: -1;
+}
+
+/* Form Title */
+.delivery-form h3 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+/* Form Labels */
+.delivery-form label {
+    font-size: 15px;
+    color: #444;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Input Fields */
+.delivery-form input,
+.delivery-form textarea,
+.delivery-form select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease-in-out;
+    color: #333;
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Fix: Ensure input is above */
+    z-index: 1;
+}
+
+/* Input Focus Effect */
+.delivery-form input:focus,
+.delivery-form textarea:focus,
+.delivery-form select:focus {
+    border-color: #ff007f;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.5);
+}
+
+/* Submit Button */
+.delivery-form button {
+    background: linear-gradient(135deg, #ff007f, #ff4b8b);
+    color: white;
+    font-size: 16px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+}
+
+/* Button Hover Effect */
+.delivery-form button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff4b8b, #ff007f);
+    box-shadow: 0 5px 15px rgba(255, 75, 139, 0.7);
+}
+
+
+
+/* Loading Bar */
+.loading-bar {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ff4081;
+}
+
+.progress {
+    height: 8px;
+    background: #ff4081;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+}
+
+/* Order Confirmation */
+.order-confirmation {
+    background: rgba(255, 255, 255, 0.15); /* Glass effect */
+    backdrop-filter: blur(15px);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More depth */
+    animation: fadeIn 0.8s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing Border */
+.order-confirmation::after {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #d8556b, #ce437d, #d1278a);
+    z-index: -1;
+    filter: blur(10px);
+    animation: glowingBorder 1.5s infinite alternate;
+}
+
+@keyframes glowingBorder {
+    0% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.order-confirmation h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Order details */
+.order-confirmation p {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 8px 0;
+    opacity: 0.9;
+}
+
+/* Checkmark with Glow */
+.order-confirmation::before {
+    content: "✔";
+    display: block;
+    font-size: 50px;
+    color: #ffcccb;
+    margin-bottom: 15px;
+    animation: popIn 0.5s ease-in-out, glowEffect 1.5s infinite alternate;
+}
+
+/* Checkmark Glow */
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 8px rgba(204, 137, 201, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 15px rgb(187, 133, 132);
+    }
+}
+
+/* Smooth fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Checkmark pop-in effect */
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* CTA Button */
+.confirmation-btn {
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.confirmation-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    box-shadow: 0 4px 12px rgba(255, 126, 179, 0.8);
+}
+
+
+

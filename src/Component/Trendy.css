@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+body {
+  font-family: 'Playfair Display', serif; /* Elegant headlines */
+  font-family: 'Lora', serif; /* Stylish body text */  
+}
+
+/* Trendy Container */
+.trendy-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Announcement Bar */
+.announcement-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.announcement-item {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.red { background-color: #d9534f; }
+.gold { background-color: #c3a46b; }
+.blue { background-color: #5bc0de; }
+
+/* Section Title */
+.trendy-title h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+/* Tab Navigation */
+.trendy-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.trendy-tabs span {
+    cursor: pointer;
+    padding: 12px 24px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    color: #333;
+    border-radius: 5px;
+}
+
+.trendy-tabs span:hover,
+.trendy-tabs .active {
+    font-weight: bold;
+    background: #ff4081;
+    color: white;
+}
+
+/* Product Slider */
+.trendy-slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.trendy-products {
+    display: flex;
+    flex-wrap: wrap; /* Ensures products wrap properly */
+    justify-content: center; /* Centers products */
+    gap: 10px; /* Adds spacing between products */
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+/* Individual Product */
+.product {
+    text-align: center;
+    min-width: 22%;
+    max-width: 250px;
+    box-sizing: border-box;
+    padding: 15px;
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+/* Product Image */
+.product img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+}
+
+.product img:hover {
+    transform: scale(1.08);
+}
+
+/* Price & Discount */
+.price {
+    font-weight: bold;
+    color: #d9534f;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+    font-size: 15px;
+}
+
+.discount {
+    background: red;
+    color: white;
+    padding: 4px 8px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Shop the Trend Button */
+.shop-trend-btn {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.3s ease-in-out;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.shop-trend-btn:hover {
+    background-color: #e60073;
+    transform: scale(1.05);
+}
+
+/* Navigation Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.slider-btn:hover {
+    background: black;
+}
+
+/* Slider Navigation Dots */
+.trendy-products-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 8px;
+}
+
+.trendy-products-dots div {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: gray;
+    transition: background 0.3s;
+    cursor: pointer;
+}
+
+.trendy-products-dots .active {
+    background-color: #ff4081;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .product {
+        min-width: 30%; /* Three products per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .trendy-products {
+        justify-content: center; /* Ensures products stay centered */
+    }
+    .product {
+        min-width: 45%; /* Two products per row */
+        max-width: 180px; /* Smaller product size */
+    }
+    .product img {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trendy-products {
+        justify-content: center; /* Ensures single-column layout */
+    }
+    .product {
+        min-width: 80%; /* One product per row */
+        max-width: 160px;
+        padding: 10px;
+    }
+    .product img {
+        max-width: 130px;
+    }
+    .trendy-title h2 {
+        font-size: 22px;
+    }
+}
+
+/* Trendy Products Button - Mobile Friendly */
+.trendy-products button {
+    display: block;
+    width: 80%;
+    max-width: 250px;
+    margin: 20px auto;
+    padding: 12px 24px;
+    font-size: 14px;
+    background-color: #ff4081;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+.trendy-products button:hover {
+    background-color: white;
+    color: #ff4081;
+    border: 2px solid #ff4081;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .trendy-products button {
+        width: 90%;
+        font-size: 13px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trendy-products button {
+        width: 100%;
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,99 @@
+.blog-section {
+    text-align: center;
+    padding: 50px 20px; /* Added padding to ensure proper spacing on smaller screens */
+    background-color: #fff;
+}
+
+.blog-title {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.blog-subtitle {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Ensures blogs wrap properly on smaller screens */
+}
+
+.blog-card {
+    width: 250px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.blog-heading {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.blog-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.blog-readmore {
+    font-size: 14px;
+    color: #ff4081;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-readmore:hover {
+    text-decoration: underline;
+}
+
+/* 🔽 Mobile Responsive Design */
+@media screen and (max-width: 768px) {
+    .blog-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items */
+        gap: 20px;
+    }
+
+    .blog-card {
+        width: 90%; /* Use more width for better visibility */
+        max-width: 350px; /* Set max-width to avoid extra-large scaling */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .blog-title {
+        font-size: 20px;
+    }
+
+    .blog-subtitle {
+        font-size: 14px;
+    }
+
+    .blog-heading {
+        font-size: 14px;
+    }
+
+    .blog-description {
+        font-size: 13px;
+    }
+
+    .blog-readmore {
+        font-size: 13px;
+    }
+}

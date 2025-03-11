@@ -1,0 +1,158 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Full Page Background */
+.contact-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('https://source.unsplash.com/1600x900/?fashion,contact') no-repeat center center/cover;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Glassmorphism Box */
+.contact-box {
+    width: 400px;
+    padding: 30px;
+    background: rgba(228, 149, 204, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(235, 222, 222, 0.3);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading */
+.contact-title {
+    color: #fff;
+    font-size: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Subtitle */
+.contact-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+/* Input Fields */
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+    border-color: #ff7eb3;
+    box-shadow: 0 0 10px rgba(255, 126, 179, 0.8);
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Textarea */
+.contact-textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Button */
+.contact-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    transform: scale(1.05);
+}
+
+/* Success Message */
+.success-message {
+    color: #6eff90;
+    font-size: 18px;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.icon {
+    font-size: 24px;
+    color: #ffccd5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icon:hover {
+    color: #ff85a2;
+    transform: scale(1.1);
+}
+
+/* Contact Info */
+.contact-info {
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 450px) {
+    .contact-box {
+        width: 90%;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:wght@400;700&display=swap');
+
+body {
+  font-family: 'Playfair Display', serif; /* Elegant headlines */
+  font-family: 'Lora', serif; /* Stylish body text */  
+}
+
+
+/* Slideshow Container */
+.slideshow-container {
+  
+  position: relative;
+  width: 100%;
+  max-width: 1400px; /* Adjusted for better scaling */
+  height: 700px; /* Adjusted for better aspect ratio */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+  /* margin-top: 60px; */
+}
+
+/* Image Wrapper */
+.slideshow-wrapper {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+}
+
+/* Slideshow Images */
+.slideshow-image {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+/* Content on the Slideshow */
+.slideshow-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+  width: 90%;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.5); /* Adds better contrast */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Headings */
+.slideshow-content h2 {
+  font-size: 16px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #ffd700; /* Fashionable golden touch */
+}
+
+.slideshow-content h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Buttons */
+.slideshow-button {
+  display: inline-block;
+  padding: 14px 28px;
+  font-size: 18px;
+  background-color: #ff4081; /* Trendy pink for fashion */
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.slideshow-button:hover {
+  background-color: transparent;
+  color: #ff4081;
+  border: 2px solid #ff4081;
+}
+
+/* Slideshow Controls */
+.slideshow-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.slideshow-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.slideshow-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Navigation Dots */
+.slideshow-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.slideshow-dots div {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: gray;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.slideshow-dots .active {
+  background-color: #ff4081;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .slideshow-container {
+    height: 600px;
+  }
+  .slideshow-image {
+    height: 600px;
+  }
+  .slideshow-content h1 {
+    font-size: 40px;
+  }
+  .slideshow-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slideshow-container {
+    height: 500px;
+  }
+  .slideshow-image {
+    height: 500px;
+  }
+  .slideshow-content {
+    width: 95%;
+    padding: 15px;
+  }
+  .slideshow-content h1 {
+    font-size: 32px;
+  }
+  .slideshow-button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slideshow-container {
+    height: 400px;
+  }
+  .slideshow-image {
+    height: 400px;
+  }
+  .slideshow-content h1 {
+    font-size: 24px;
+  }
+  .slideshow-content h2 {
+    font-size: 12px;
+  }
+  .slideshow-button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}
