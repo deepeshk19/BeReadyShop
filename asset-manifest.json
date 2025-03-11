@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/BeReadyShop/static/css/main.668c001c.css",
-    "main.js": "/BeReadyShop/static/js/main.6e071b64.js",
+    "main.js": "/BeReadyShop/static/js/main.6cb4e101.js",
     "index.html": "/BeReadyShop/index.html",
     "main.668c001c.css.map": "/BeReadyShop/static/css/main.668c001c.css.map",
-    "main.6e071b64.js.map": "/BeReadyShop/static/js/main.6e071b64.js.map"
+    "main.6cb4e101.js.map": "/BeReadyShop/static/js/main.6cb4e101.js.map"
   },
   "entrypoints": [
     "static/css/main.668c001c.css",
-    "static/js/main.6e071b64.js"
+    "static/js/main.6cb4e101.js"
   ]
 }
