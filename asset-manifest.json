@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/BeReadyShop/static/css/main.668c001c.css",
+    "main.js": "/BeReadyShop/static/js/main.6e071b64.js",
+    "index.html": "/BeReadyShop/index.html",
+    "main.668c001c.css.map": "/BeReadyShop/static/css/main.668c001c.css.map",
+    "main.6e071b64.js.map": "/BeReadyShop/static/js/main.6e071b64.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.668c001c.css",
+    "static/js/main.6e071b64.js"
+  ]
+}
